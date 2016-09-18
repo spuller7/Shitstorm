@@ -21,5 +21,17 @@ MonoBehaviour:
   EnabledRegions: -1
   JoinLobby: 0
   EnableLobbyStatistics: 0
-  RpcList: []
-  DisableAutoOpenWizard: 0
+  RpcList:
+  - Chat
+  - DestroyRpc
+  - InstantiateRpc
+  - OnAwakeRPC
+  - OnHeal
+  - OnRespawn
+  - PickupItemInit
+  - PunPickup
+  - PunPickupSimple
+  - PunRespawn
+  - RequestForPickupItems
+  - RequestForPickupTimes
+  DisableAutoOpenWizard: 1
