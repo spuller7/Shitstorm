@@ -9,6 +9,8 @@ public class PlayerEffects : MonoBehaviour {
     private GameObject boostEffectGameobject;
     [SerializeField]
     private GameObject gunFlareEffectGameobject;
+    [SerializeField]
+    private GameObject bloodSplatterGameobject;
 
     void Start()
     {
@@ -28,7 +30,7 @@ public class PlayerEffects : MonoBehaviour {
         {
             if(boostEffect.getEffectActivity() == false)
             {
-              //  boostEffect.enableEffect();
+              boostEffect.enableEffect();
             }
         }
         else
@@ -38,5 +40,19 @@ public class PlayerEffects : MonoBehaviour {
                 boostEffect.disableEffect();
             }
         }
+    }
+    public void setBoost(bool isBoosting)
+    {
+        this.isBoosting = isBoosting;
+    }
+    public void onArrayHit()
+    {
+        PlayerEffectController pEC = bloodSplatterGameobject.GetComponent<PlayerEffectController>();
+        pEC.onShotTrigger();
+    }
+    public void onShoot()
+    {
+        
+        gunFlareEffectGameobject.GetComponent<PlayerEffectController>().onShotTrigger();
     }
 }

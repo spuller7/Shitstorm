@@ -151,20 +151,28 @@
     <Compile Include="Assets\PhotonChatApi\ChatState.cs" />
     <Compile Include="Assets\PhotonChatApi\ChatUserStatus.cs" />
     <Compile Include="Assets\PhotonChatApi\IChatClientListener.cs" />
-    <Compile Include="Assets\Scripts\CameraFit.cs" />
     <Compile Include="Assets\Scripts\Multiplayer\Lobby.cs" />
     <Compile Include="Assets\Scripts\Multiplayer\Login.cs" />
     <Compile Include="Assets\Scripts\Multiplayer\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Multiplayer\Menus.cs" />
     <Compile Include="Assets\Scripts\Multiplayer\Preloader.cs" />
     <Compile Include="Assets\Scripts\Multiplayer\RoomProperty.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerBoost.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerCollision.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerEffectController.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerEffects.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMaster.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMotor.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerSetup.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerShoot.cs" />
     <Compile Include="Assets\Scripts\Player\Rotate.cs" />
+    <Compile Include="Assets\Scripts\SceneManaging\CameraFit.cs" />
+    <Compile Include="Assets\Scripts\SceneManaging\ObjectSpin.cs" />
+    <Compile Include="Assets\Scripts\SceneManaging\OnPickUp.cs" />
+    <Compile Include="Assets\Scripts\SceneManaging\SpawnPickUpItems.cs" />
+    <Compile Include="Assets\Scripts\SceneManaging\SpawnPlacementHolder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Photon Unity Networking\changelog.txt" />
