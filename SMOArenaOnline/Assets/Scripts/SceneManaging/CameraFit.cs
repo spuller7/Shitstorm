@@ -30,21 +30,23 @@ public class CameraFit : MonoBehaviour {
     private Transform defaultObject;
     private bool isDead;
     private bool isPlaying;
-
+    private GameObject[] cameraTargets;
     // Use this for initialization
     void Start()
     {
         isDead = false;
-        camDistance = 5f;
-        bounds = 12.0f;
+        isPlaying = true;
+        
+        bounds = 55.0f;
     }
 
     // Update is called once per frame
     void Update()
     {
         //When there is only one or zero players in the arena
-        if(target2 == null || isDead || !isPlaying)
+        if(isDead || !isPlaying)
         {
+            Debug.Log("don't middle");
             Vector3 delta = Midpoint - GetComponent<Camera>().ViewportToWorldPoint(new Vector3(0.5f, 0.5f, ((cameraDistanceMaximum + cameraDistanceMinimum)/2))); 
             Vector3 destination = defaultObject.position + delta;
             transform.position = Vector3.SmoothDamp(transform.position, destination, ref velocity, dampTime);

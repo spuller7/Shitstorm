@@ -67,6 +67,9 @@
     <Reference Include="websocket-sharp">
       <HintPath>Assets\Plugins\WebSocket\websocket-sharp.dll</HintPath>
     </Reference>
+    <Reference Include="AmplifyColor">
+      <HintPath>Assets\AmplifyColor\Plugins\AmplifyColor.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="SMOArenaOnline.CSharp.Plugins.csproj">
@@ -75,11 +78,19 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AmplifyColor\Plugins\AmplifyColorEffect.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\AmplifyColorVolume.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\AmplifyColorVolume2D.cs" />
     <Compile Include="Assets\CameraPack\Scripts\BaseGUI.cs" />
     <Compile Include="Assets\CameraPack\Scripts\CameraMove.cs" />
     <Compile Include="Assets\CameraPack\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
+    <Compile Include="Assets\Effects\Death\Death1\PlaygroundC.cs" />
+    <Compile Include="Assets\Effects\Death\Death1\PlaygroundParticlesC.cs" />
+    <Compile Include="Assets\Effects\Death\Death1\PlaygroundSpline.cs" />
     <Compile Include="Assets\Effects\Mist\AnimatedLight.cs" />
     <Compile Include="Assets\Effects\Mist\ParticleSystems.cs" />
+    <Compile Include="Assets\Mirza Beig\Shaders\Image Effects\Resources\Sharpen\Sharpen.cs" />
+    <Compile Include="Assets\Mirza Beig\Shaders\_Common\IEBase.cs" />
     <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\CustomTypes.cs" />
     <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\Enums.cs" />
     <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\Extensions.cs" />
@@ -151,12 +162,14 @@
     <Compile Include="Assets\PhotonChatApi\ChatState.cs" />
     <Compile Include="Assets\PhotonChatApi\ChatUserStatus.cs" />
     <Compile Include="Assets\PhotonChatApi\IChatClientListener.cs" />
+    <Compile Include="Assets\PlayerSpawn.cs" />
     <Compile Include="Assets\Scripts\Multiplayer\Lobby.cs" />
     <Compile Include="Assets\Scripts\Multiplayer\Login.cs" />
     <Compile Include="Assets\Scripts\Multiplayer\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Multiplayer\Menus.cs" />
     <Compile Include="Assets\Scripts\Multiplayer\Preloader.cs" />
     <Compile Include="Assets\Scripts\Multiplayer\RoomProperty.cs" />
+    <Compile Include="Assets\Scripts\Player\Player2Controller.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerBoost.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerCollision.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
@@ -171,15 +184,60 @@
     <Compile Include="Assets\Scripts\SceneManaging\CameraFit.cs" />
     <Compile Include="Assets\Scripts\SceneManaging\ObjectSpin.cs" />
     <Compile Include="Assets\Scripts\SceneManaging\OnPickUp.cs" />
+    <Compile Include="Assets\Scripts\SceneManaging\Score.cs" />
     <Compile Include="Assets\Scripts\SceneManaging\SpawnPickUpItems.cs" />
     <Compile Include="Assets\Scripts\SceneManaging\SpawnPlacementHolder.cs" />
+    <Compile Include="Assets\gamemode.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\AmplifyColor\License.txt" />
+    <None Include="Assets\AmplifyColor\Readme.txt" />
+    <None Include="Assets\AmplifyColor\Resources\Base.shader" />
+    <None Include="Assets\AmplifyColor\Resources\Blend.shader" />
+    <None Include="Assets\AmplifyColor\Resources\BlendCache.shader" />
+    <None Include="Assets\AmplifyColor\Resources\Common.cginc" />
+    <None Include="Assets\AmplifyColor\Resources\DepthMask.shader" />
+    <None Include="Assets\AmplifyColor\Resources\DepthMaskBlend.shader" />
+    <None Include="Assets\AmplifyColor\Resources\Mask.shader" />
+    <None Include="Assets\AmplifyColor\Resources\MaskBlend.shader" />
+    <None Include="Assets\AmplifyColor\Resources\ProcessOnly.shader" />
+    <None Include="Assets\AmplifyColor\Samples\Check out the full LUT Package.txt" />
+    <None Include="Assets\Mirza Beig\Shaders\Image Effects\Resources\Sharpen\Sharpen.shader" />
+    <None Include="Assets\Mirza Beig\Shaders\MIR-2II Shader Pack\Particles\Cutout\AlphaCutoff-Add.shader" />
+    <None Include="Assets\Mirza Beig\Shaders\MIR-2II Shader Pack\Particles\Cutout\AlphaCutoff-Alpha.shader" />
+    <None Include="Assets\Mirza Beig\Shaders\MIR-2II Shader Pack\Particles\Distortion\Distortion-Add.shader" />
+    <None Include="Assets\Mirza Beig\Shaders\MIR-2II Shader Pack\Particles\Distortion\Distortion-Alpha.shader" />
+    <None Include="Assets\Mirza Beig\Shaders\MIR-2II Shader Pack\Particles\Distortion\DistortionTextured-Add.shader" />
+    <None Include="Assets\Mirza Beig\Shaders\MIR-2II Shader Pack\Particles\Distortion\DistortionTextured-Alpha.shader" />
+    <None Include="Assets\Mirza Beig\Shaders\MIR-2II Shader Pack\Particles\Intersection Highlight\IntersectionHighlight-Add.shader" />
+    <None Include="Assets\Mirza Beig\Shaders\MIR-2II Shader Pack\Particles\Intersection Highlight\IntersectionHighlight-Alpha.shader" />
+    <None Include="Assets\Mirza Beig\Shaders\MIR-2II Shader Pack\Particles\Mask\Mask-Alpha.shader" />
+    <None Include="Assets\Mirza Beig\Shaders\MIR-2II Shader Pack\Particles\No Fog\NoFog-Add.shader" />
+    <None Include="Assets\Mirza Beig\Shaders\MIR-2II Shader Pack\Particles\No Fog\NoFog-Alpha.shader" />
+    <None Include="Assets\Mirza Beig\Shaders\MIR-2II Shader Pack\Particles\Unmultiply\Unmultiply-AlphaFromLuminance.shader" />
     <None Include="Assets\Photon Unity Networking\changelog.txt" />
     <None Include="Assets\Photon Unity Networking\link.xml" />
     <None Include="Assets\Photon Unity Networking\readme.txt" />
     <None Include="Assets\Plugins\Photon3Unity3D.xml" />
     <None Include="Assets\Plugins\release_history.txt" />
+    <None Include="Assets\Standard Assets\Effects\AmbientOcclusion\Resources\AmbientOcclusion.cginc" />
+    <None Include="Assets\Standard Assets\Effects\AmbientOcclusion\Resources\AmbientOcclusion.shader" />
+    <None Include="Assets\Standard Assets\Effects\AntiAliasing\FXAA\Resources\FXAA.shader" />
+    <None Include="Assets\Standard Assets\Effects\AntiAliasing\FXAA\Resources\FXAA3.cginc" />
+    <None Include="Assets\Standard Assets\Effects\AntiAliasing\SMAA\Resources\SMAA.cginc" />
+    <None Include="Assets\Standard Assets\Effects\AntiAliasing\SMAA\Resources\SMAA.shader" />
+    <None Include="Assets\Standard Assets\Effects\Bloom\Resources\Bloom.cginc" />
+    <None Include="Assets\Standard Assets\Effects\Bloom\Resources\Bloom.shader" />
+    <None Include="Assets\Standard Assets\Effects\DepthOfField\Resources\BokehSplatting.shader" />
+    <None Include="Assets\Standard Assets\Effects\DepthOfField\Resources\DepthOfField.shader" />
+    <None Include="Assets\Standard Assets\Effects\DepthOfField\Resources\MedianFilter.shader" />
+    <None Include="Assets\Standard Assets\Effects\LensAberrations\Resources\LensAberrations.shader" />
+    <None Include="Assets\Standard Assets\Effects\ScreenSpaceReflection\Resources\ScreenSpaceRaytrace.cginc" />
+    <None Include="Assets\Standard Assets\Effects\ScreenSpaceReflection\Resources\ScreenSpaceReflection.shader" />
+    <None Include="Assets\Standard Assets\Effects\TonemappingColorGrading\Resources\HistogramCompute.compute" />
+    <None Include="Assets\Standard Assets\Effects\TonemappingColorGrading\Resources\HistogramRender.shader" />
+    <None Include="Assets\Standard Assets\Effects\TonemappingColorGrading\Resources\TonemappingColorGrading.cginc" />
+    <None Include="Assets\Standard Assets\Effects\TonemappingColorGrading\Resources\TonemappingColorGrading.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

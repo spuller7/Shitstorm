@@ -35,4 +35,5 @@ MonoBehaviour:
   - RequestForPickupItems
   - RequestForPickupTimes
   - changeHealth
+  - changeScore
   DisableAutoOpenWizard: 1

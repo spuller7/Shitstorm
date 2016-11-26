@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMOArenaOnline.CSharp.Plugi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMOArenaOnline.CSharp", "SMOArenaOnline.CSharp.csproj", "{636EFABE-6C62-34EF-E49D-BC2585425942}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMOArenaOnline.CSharp.Editor.Plugins", "SMOArenaOnline.CSharp.Editor.Plugins.csproj", "{71E73B1E-0B96-1375-8900-2C4C9EDA34DF}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMOArenaOnline.CSharp.Editor", "SMOArenaOnline.CSharp.Editor.csproj", "{CA882A01-D329-2175-2277-CCCB83F75E08}"
 EndProject
 Global
@@ -21,6 +23,10 @@ Global
 		{636EFABE-6C62-34EF-E49D-BC2585425942}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{636EFABE-6C62-34EF-E49D-BC2585425942}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{636EFABE-6C62-34EF-E49D-BC2585425942}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71E73B1E-0B96-1375-8900-2C4C9EDA34DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71E73B1E-0B96-1375-8900-2C4C9EDA34DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71E73B1E-0B96-1375-8900-2C4C9EDA34DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71E73B1E-0B96-1375-8900-2C4C9EDA34DF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CA882A01-D329-2175-2277-CCCB83F75E08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CA882A01-D329-2175-2277-CCCB83F75E08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA882A01-D329-2175-2277-CCCB83F75E08}.Release|Any CPU.ActiveCfg = Release|Any CPU

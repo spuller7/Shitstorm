@@ -156,13 +156,14 @@ GameObject:
   - 4: {fileID: 4000013146193398}
   - 114: {fileID: 114000012943783246}
   - 135: {fileID: 135000012013011052}
+  - 114: {fileID: 114000010771093806}
   m_Layer: 0
   m_Name: ItemPickUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1000013056358782
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,6 +586,20 @@ Light:
   m_BounceIntensity: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114000010771093806
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012905156806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4736f12f0a8e14042826d576fa27c58d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isWeapon: 0
+  weaponId: 0
+  fuelAdditiveLevel: 45
 --- !u!114 &114000012943783246
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -67,16 +67,77 @@
     <Reference Include="websocket-sharp">
       <HintPath>Assets\Plugins\WebSocket\websocket-sharp.dll</HintPath>
     </Reference>
+    <Reference Include="AmplifyColor">
+      <HintPath>Assets\AmplifyColor\Plugins\AmplifyColor.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Plugins\WebSocket\WebSocket.cs" />
+    <Compile Include="Assets\Standard Assets\Effects\AmbientOcclusion\AmbientOcclusion.cs" />
+    <Compile Include="Assets\Standard Assets\Effects\AmbientOcclusion\Helpers\PropertyObserver.cs" />
+    <Compile Include="Assets\Standard Assets\Effects\AmbientOcclusion\Helpers\Settings.cs" />
+    <Compile Include="Assets\Standard Assets\Effects\AntiAliasing\AntiAliasing.cs" />
+    <Compile Include="Assets\Standard Assets\Effects\AntiAliasing\FXAA\FXAA.cs" />
+    <Compile Include="Assets\Standard Assets\Effects\AntiAliasing\IAntiAliasing.cs" />
+    <Compile Include="Assets\Standard Assets\Effects\AntiAliasing\SMAA\SMAA.cs" />
+    <Compile Include="Assets\Standard Assets\Effects\Bloom\Bloom.cs" />
+    <Compile Include="Assets\Standard Assets\Effects\Common\ImageEffectHelper.cs" />
+    <Compile Include="Assets\Standard Assets\Effects\Common\MinAttribute.cs" />
+    <Compile Include="Assets\Standard Assets\Effects\Common\RenderTextureUtility.cs" />
+    <Compile Include="Assets\Standard Assets\Effects\DepthOfField\DepthOfField.cs" />
+    <Compile Include="Assets\Standard Assets\Effects\LensAberrations\LensAberrations.cs" />
+    <Compile Include="Assets\Standard Assets\Effects\ScreenSpaceReflection\ScreenSpaceReflection.cs" />
+    <Compile Include="Assets\Standard Assets\Effects\TonemappingColorGrading\TonemappingColorGrading.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\AmplifyColor\License.txt" />
+    <None Include="Assets\AmplifyColor\Readme.txt" />
+    <None Include="Assets\AmplifyColor\Resources\Base.shader" />
+    <None Include="Assets\AmplifyColor\Resources\Blend.shader" />
+    <None Include="Assets\AmplifyColor\Resources\BlendCache.shader" />
+    <None Include="Assets\AmplifyColor\Resources\Common.cginc" />
+    <None Include="Assets\AmplifyColor\Resources\DepthMask.shader" />
+    <None Include="Assets\AmplifyColor\Resources\DepthMaskBlend.shader" />
+    <None Include="Assets\AmplifyColor\Resources\Mask.shader" />
+    <None Include="Assets\AmplifyColor\Resources\MaskBlend.shader" />
+    <None Include="Assets\AmplifyColor\Resources\ProcessOnly.shader" />
+    <None Include="Assets\AmplifyColor\Samples\Check out the full LUT Package.txt" />
+    <None Include="Assets\Mirza Beig\Shaders\Image Effects\Resources\Sharpen\Sharpen.shader" />
+    <None Include="Assets\Mirza Beig\Shaders\MIR-2II Shader Pack\Particles\Cutout\AlphaCutoff-Add.shader" />
+    <None Include="Assets\Mirza Beig\Shaders\MIR-2II Shader Pack\Particles\Cutout\AlphaCutoff-Alpha.shader" />
+    <None Include="Assets\Mirza Beig\Shaders\MIR-2II Shader Pack\Particles\Distortion\Distortion-Add.shader" />
+    <None Include="Assets\Mirza Beig\Shaders\MIR-2II Shader Pack\Particles\Distortion\Distortion-Alpha.shader" />
+    <None Include="Assets\Mirza Beig\Shaders\MIR-2II Shader Pack\Particles\Distortion\DistortionTextured-Add.shader" />
+    <None Include="Assets\Mirza Beig\Shaders\MIR-2II Shader Pack\Particles\Distortion\DistortionTextured-Alpha.shader" />
+    <None Include="Assets\Mirza Beig\Shaders\MIR-2II Shader Pack\Particles\Intersection Highlight\IntersectionHighlight-Add.shader" />
+    <None Include="Assets\Mirza Beig\Shaders\MIR-2II Shader Pack\Particles\Intersection Highlight\IntersectionHighlight-Alpha.shader" />
+    <None Include="Assets\Mirza Beig\Shaders\MIR-2II Shader Pack\Particles\Mask\Mask-Alpha.shader" />
+    <None Include="Assets\Mirza Beig\Shaders\MIR-2II Shader Pack\Particles\No Fog\NoFog-Add.shader" />
+    <None Include="Assets\Mirza Beig\Shaders\MIR-2II Shader Pack\Particles\No Fog\NoFog-Alpha.shader" />
+    <None Include="Assets\Mirza Beig\Shaders\MIR-2II Shader Pack\Particles\Unmultiply\Unmultiply-AlphaFromLuminance.shader" />
     <None Include="Assets\Photon Unity Networking\changelog.txt" />
     <None Include="Assets\Photon Unity Networking\link.xml" />
     <None Include="Assets\Photon Unity Networking\readme.txt" />
     <None Include="Assets\Plugins\Photon3Unity3D.xml" />
     <None Include="Assets\Plugins\release_history.txt" />
+    <None Include="Assets\Standard Assets\Effects\AmbientOcclusion\Resources\AmbientOcclusion.cginc" />
+    <None Include="Assets\Standard Assets\Effects\AmbientOcclusion\Resources\AmbientOcclusion.shader" />
+    <None Include="Assets\Standard Assets\Effects\AntiAliasing\FXAA\Resources\FXAA.shader" />
+    <None Include="Assets\Standard Assets\Effects\AntiAliasing\FXAA\Resources\FXAA3.cginc" />
+    <None Include="Assets\Standard Assets\Effects\AntiAliasing\SMAA\Resources\SMAA.cginc" />
+    <None Include="Assets\Standard Assets\Effects\AntiAliasing\SMAA\Resources\SMAA.shader" />
+    <None Include="Assets\Standard Assets\Effects\Bloom\Resources\Bloom.cginc" />
+    <None Include="Assets\Standard Assets\Effects\Bloom\Resources\Bloom.shader" />
+    <None Include="Assets\Standard Assets\Effects\DepthOfField\Resources\BokehSplatting.shader" />
+    <None Include="Assets\Standard Assets\Effects\DepthOfField\Resources\DepthOfField.shader" />
+    <None Include="Assets\Standard Assets\Effects\DepthOfField\Resources\MedianFilter.shader" />
+    <None Include="Assets\Standard Assets\Effects\LensAberrations\Resources\LensAberrations.shader" />
+    <None Include="Assets\Standard Assets\Effects\ScreenSpaceReflection\Resources\ScreenSpaceRaytrace.cginc" />
+    <None Include="Assets\Standard Assets\Effects\ScreenSpaceReflection\Resources\ScreenSpaceReflection.shader" />
+    <None Include="Assets\Standard Assets\Effects\TonemappingColorGrading\Resources\HistogramCompute.compute" />
+    <None Include="Assets\Standard Assets\Effects\TonemappingColorGrading\Resources\HistogramRender.shader" />
+    <None Include="Assets\Standard Assets\Effects\TonemappingColorGrading\Resources\TonemappingColorGrading.cginc" />
+    <None Include="Assets\Standard Assets\Effects\TonemappingColorGrading\Resources\TonemappingColorGrading.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

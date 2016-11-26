@@ -35,24 +35,20 @@ public class SpawnPickUpItems : MonoBehaviour {
 
             return;
         }
-        Debug.Log("here");
         int spawnPointIndex = Random.Range(0, spawnSpots.Length);
         //Need to photon later
         if(spawnSpots[spawnPointIndex].GetComponent<SpawnPlacementHolder>().getStatus() == true)
         {
-            Debug.Log("Spawn taken");
             return;
         }
         int choosePickUp = Random.Range(0, pickUpItems.Length);
         
         if(Random.value > 1.0 - spawnRate[choosePickUp])
         {
-            Instantiate(pickUpItems[choosePickUp], spawnSpots[spawnPointIndex].position, spawnSpots[spawnPointIndex].rotation);
+            GameObject go =(GameObject)Instantiate(pickUpItems[choosePickUp], spawnSpots[spawnPointIndex].position, spawnSpots[spawnPointIndex].rotation);
             spawnSpots[spawnPointIndex].GetComponent<SpawnPlacementHolder>().setStatus(true);
-        }
-        else
-        {
-            Debug.Log("no");
+
+            go.GetComponent<OnPickUp>().setSpawnObject((GameObject)spawnSpots[spawnPointIndex].gameObject);
         }
 
     }

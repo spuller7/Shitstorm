@@ -11,6 +11,7 @@ public class OnPickUp : MonoBehaviour {
     private int weaponId;
     [SerializeField]
     private float fuelAdditiveLevel = 45;
+    private GameObject spawn;
 
     void OnTriggerEnter(Collider collision)
     {
@@ -23,7 +24,12 @@ public class OnPickUp : MonoBehaviour {
             weaponHandler(collision.gameObject);
         }
         Destroy(gameObject);
+        spawn.GetComponent<SpawnPlacementHolder>().setStatus(false);
 
+    }
+    public void setSpawnObject(GameObject spawn)
+    {
+        this.spawn = spawn;
     }
 
     private void boostHandler(GameObject player)
