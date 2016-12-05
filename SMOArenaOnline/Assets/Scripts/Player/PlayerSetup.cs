@@ -10,11 +10,14 @@ public class PlayerSetup : NetworkBehaviour {
 
     void Start()
     {
+
+        Camera.main.GetComponent<CameraFit>().setTarget(this.transform);
+
         gamemode = Camera.main.GetComponent<gamemode>();
 
         //ensure player has the right tag for script management
         gameObject.tag = "Player";
-
+        /*
         //disable scripts that other players can't control
         if (gamemode.getGameMode() != 1)    
         {
@@ -26,6 +29,6 @@ public class PlayerSetup : NetworkBehaviour {
                     componentsToDisable[i].enabled = false;
                 }
             }
-        }
+        }*/
     }
 }

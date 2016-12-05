@@ -44,7 +44,7 @@ public class CameraFit : MonoBehaviour {
     void Update()
     {
         //When there is only one or zero players in the arena
-        if(isDead || !isPlaying)
+        if(isDead || !isPlaying || target1 == null || target2 == null)
         {
             Debug.Log("don't middle");
             Vector3 delta = Midpoint - GetComponent<Camera>().ViewportToWorldPoint(new Vector3(0.5f, 0.5f, ((cameraDistanceMaximum + cameraDistanceMinimum)/2))); 
@@ -83,6 +83,19 @@ public class CameraFit : MonoBehaviour {
             Vector3 destination = transform.position + delta;
             transform.position = Vector3.SmoothDamp(transform.position, destination, ref velocity, dampTime);
             
+        }
+    }
+    public void setTarget(Transform trans)
+    {
+        if (target1 == null)
+        {
+            target1 = trans;
+        } else if (target2 == null)
+        {
+            target2 = trans;
+        }else
+        {
+            return;
         }
     }
 }

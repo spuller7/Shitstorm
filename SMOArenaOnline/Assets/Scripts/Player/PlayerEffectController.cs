@@ -8,6 +8,10 @@ public class PlayerEffectController : MonoBehaviour {
     [SerializeField]
     private bool isEnabled = false;
     [SerializeField]
+    private AudioSource gunShot;
+    [SerializeField]
+    private AudioClip gunShotSound;
+    [SerializeField]
     Light[] lightToDisable;
 
     void Start()
@@ -62,6 +66,7 @@ public class PlayerEffectController : MonoBehaviour {
         for (int i = 0; i < effectsToDisable.Length; i++)
         {
             effectsToDisable[i].Emit(1);
+            gunShot.PlayOneShot(gunShotSound, .5f);
         }
 
     }
